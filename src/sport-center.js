@@ -6,14 +6,12 @@ const Service = require('./service')
 class SportCenter {
   #services
   #instructor
-  #listInstructorsActivities
   constructor (name, fee, membership = 0) {
     this.name = name
     this.fee = fee
     this.membership = membership
     this.#services = []
     this.#instructor = []
-    this.#listInstructorsActivities = []
   }
 
   income () {
@@ -58,7 +56,7 @@ class SportCenter {
     if (order == 'name') {
       return this.#services.sort((a, b) => a.name.localeCompare(b.name))
     }
-    if (order == 'rating') {
+    if (order === 'rating') {
       return this.#services.sort((b, a) => a.rating - b.rating)
     }
   }
@@ -94,17 +92,17 @@ class SportCenter {
     return finalarray
   }
 
-  costServices(){
-    let total=0
+  costServices () {
+    let total = 0
     this.getServices().forEach(service => {
       total += service.calculateCost()
-    });
+    })
     return total
   }
 
-  costInstructors(){
-    let total =0
-    this.getInstructors().forEach(instructor =>{
+  costInstructors () {
+    let total = 0
+    this.getInstructors().forEach(instructor => {
       total += instructor.salary
     })
     return total

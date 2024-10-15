@@ -1,15 +1,15 @@
 const Service = require('./service')
 
 class Activity extends Service {
-  #instructor=null
+  #instructor = null
   constructor (name, fixedCost = 0, variableCost = 0, assistance = 0) {
     super(name)
     this.fixedCost = fixedCost
     this.assistance = assistance
     this.variableCost = variableCost
-
   }
-  get instructor(){
+
+  get instructor () {
     return this.#instructor
   }
 
@@ -17,8 +17,8 @@ class Activity extends Service {
     return this.fixedCost + this.variableCost * this.assistance
   }
 
-  ledBy(instructor){
-    this.#instructor=instructor
+  ledBy (instructor) {
+    this.#instructor = instructor
   }
 }
 module.exports = Activity
