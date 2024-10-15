@@ -13,7 +13,7 @@ class Activity extends Service {
     return this.#instructor
   }
 
-  calculateCost () {
+  calculateCost () { 
     return this.fixedCost + this.variableCost * this.assistance
   }
 

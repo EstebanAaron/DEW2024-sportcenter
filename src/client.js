@@ -9,7 +9,7 @@ class Client {
     }
   }
 
-  get category () {
+  get category () { 
     if (this.#age <= 21) {
       return 'Promesa'
     }
@@ -20,7 +20,7 @@ class Client {
     }
   }
 
-  get age () {
+  get age () { 
     return this.#age
   }
 
