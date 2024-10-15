@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-const Facility = require('../src/facility')
+const Facility = require('../src/facility.js')
 
 test('Create a facility with maintenance cost', () => {
   const facility = new Facility('Spa', 2000)

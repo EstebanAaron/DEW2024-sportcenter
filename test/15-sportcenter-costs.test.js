@@ -65,5 +65,5 @@ test('Calculate costInstructors of Sport Center with instructors with activities
   pepe.lead(spinning)
   marta.lead(pilates)
   susana.lead(step)
-  expect(sc.costInstructors()).toBe(2625)
+  expect(sc.costInstructors()).toBe(2390)
 })

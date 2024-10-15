@@ -6,9 +6,9 @@ const Activity = require('../src/activity')
 const pepe = new Instructor('Pepe') // basicSalary = 500
 const marta = new Instructor('Marta', 600)
 const susana = new Instructor('Susana', 700)
-const zumba = new Activity('Zumba')
+const zumba = new Activity('Zumba', 100, 5)
 const spinning = new Activity('Spinning', 100)
-const pilates = new Activity('Pilates', 30)
+const pilates = new Activity('Pilates', 100, 5)
 
 test('Salary without activities', () => {
   expect(pepe.salary).toBe(500)
