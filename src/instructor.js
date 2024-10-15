@@ -11,7 +11,7 @@ class Instructor {
   get salary () {
     let total = this.#basicSalary
     this.ledActivities.forEach(element => {
-      total += element.calculateCost()
+      total += element.assistance * 5 + 100
     })
     return total
   }
